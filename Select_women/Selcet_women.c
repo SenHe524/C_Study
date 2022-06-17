@@ -4,7 +4,7 @@
 #include <string.h>
 #include <windows.h>
 #include <mmsystem.h>
-#pragma comment(lib,"winmm.lib")
+
 
 int main()
 {
@@ -48,7 +48,7 @@ int main()
                     printf("陛下选妃了！\n");
                     count++;
                     printf("请输入娘娘的名字：");
-                    scanf("%s",&names[count-1]);
+                    scanf("%s",names[count-1]);
                     levels[count-1] = 0;
                     love[count-1] = 100;
                     for(i=0;i<count;i++)
