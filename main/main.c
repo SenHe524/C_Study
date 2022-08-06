@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+#define aa 128
+#define bb aa << 5
 typedef struct
 {
     int *data;
@@ -9,25 +10,34 @@ typedef struct
     int len;
 } List;
 
+typedef unsigned char ecbuft[8];
+
 void Init_List(List *L, int size);
 void IncreaseSize(List *L, int len);
 void SetList(List *L, int i, int data);
 void PrintfList(List *L);
 int main(void)
 {
-    List L;
-    Init_List(&L, 10);
-    PrintfList(&L);
-    SetList(&L, 5, 10);
-    PrintfList(&L);
-    IncreaseSize(&L, 5);
-    PrintfList(&L);
-    SetList(&L, 11, 4);
-    PrintfList(&L);
-    SetList(&L, 1, 9);
-    PrintfList(&L);
-    SetList(&L, 20, 5);
-    PrintfList(&L);
+    // List L;
+    // Init_List(&L, 10);
+    // PrintfList(&L);
+    // SetList(&L, 5, 10);
+    // PrintfList(&L);
+    // IncreaseSize(&L, 5);
+    // PrintfList(&L);
+    // SetList(&L, 11, 4);
+    // PrintfList(&L);
+    // SetList(&L, 1, 9);
+    // PrintfList(&L);
+    // SetList(&L, 20, 5);
+    // PrintfList(&L);
+
+    // int a = bb;
+    // printf("%d\n", a);
+
+    ecbuft rxbuf[8];
+    printf(" %d ",sizeof(rxbuf[0]));
+    system("pause");
     return 0;
 }
 
@@ -66,7 +76,7 @@ void SetList(List *L, int i, int data)
         L->len < i? L->len = i:0;
     }
     else{
-        printf("插入位置错误！\n");
+        printf("锟斤拷锟斤拷位锟矫达拷锟斤拷\n");
     }
 }
 
@@ -74,7 +84,7 @@ void PrintfList(List *L)
 {
     for(int i = 0; i < L->len; i++)
     {
-        printf("第%d位元素为%d\n",i+1, L->data[i]);
+        printf("锟斤拷%d位元锟斤拷为%d\n",i+1, L->data[i]);
     }
     printf("\n");
 }
