@@ -10,12 +10,14 @@ typedef struct
     int len;
 } List;
 
-typedef unsigned char ecbuft[8];
+
 
 void Init_List(List *L, int size);
 void IncreaseSize(List *L, int len);
 void SetList(List *L, int i, int data);
 void PrintfList(List *L);
+
+
 int main(void)
 {
     // List L;
@@ -34,9 +36,13 @@ int main(void)
 
     // int a = bb;
     // printf("%d\n", a);
+    
+    // long long a = 21474836480;
+    // printf("%I64d\n", a);
+    // unsigned short int a = 0;
+    // a = -50;
+    // printf("%d", a);
 
-    ecbuft rxbuf[8];
-    printf(" %d ",sizeof(rxbuf[0]));
     system("pause");
     return 0;
 }
